@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "IMF credit outstanding for all members from 1984-2022 relative to global GDP ",
+    "subtitle": "in SDRs. Source: IMF",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/IMFproportionalloans.csv"
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "bar", "color": "#FF5733"},
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "axis": {"title": null, "grid": false, "ticks": false, "labelAngle": 45}
+    },
+    "y": {
+      "field": "Proportional Lending",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false}
+    }
+  },
+  "config": {}
+}
