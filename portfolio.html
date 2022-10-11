@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Document</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+<body>
+
+    <div class="myWeek1">
+        <h1>My Portfolio 2022</h1>
+        
+        <h3>Renewable electricity generation</h3>
+        <p>The first chart tracks global renewable electricty generation over time.</p>
+        <div class="chart" id="Chart1"></div>
+
+        <h3>Deforestation</h3>
+        <p>My second chart shows changes in forest area over time for 5 countries.</p>
+        <div class="chart" id="Chart2"></div>
+    </div> 
+    <div class="myWeek2">
+        <h1>Week 2</h1>
+    
+        <h3>IMF Outstanding Loans</h3>
+        <p>This chart shows how total outstanding credit for all members of the IMF has changed from 1984-2022.</p>
+        <div class="chart" id="Chart3"></div>
+
+        <h3>IMF Outstanding Loans Proportional to Global GDP</h3>
+        <p>This chart shows how total outstanding credit as a proportion of global GDP has changed from 1984-2022.</p>
+        <div class="chart" id="Chart4"></div>
+        <p>The riskiest year is 1985 as this has the highest credit outstanding value as a proportion of global GDP.</p>
+
+</body>
+
+<script>
+
+    var myChart1 = "week1/chartENV7renewableGeneration.json";
+    var myChart2 = "week1/chartENV14.json";
+    var myChart3 = "week2/imfloans.json";
+    var myChart4 = "week2/imfglobalgdp.json";
+
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3);
+    vegaEmbed('#Chart4', myChart4);
+    
+</script>
+
+</html>
+
+
