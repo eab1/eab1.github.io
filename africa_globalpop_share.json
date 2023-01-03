@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Africa's Population Boom",
+    "subtitle": [
+      "A graph showing Africa's historical and projected % share of world population. Source: Worldometer"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11
+  },
+  "data": {
+    "values": [
+      {
+        "Year": 2025,
+        "Africas Share of World Population": 19.4,
+        "predicted": true
+      },
+      {
+        "Year": 2030,
+        "Africas Share of World Population": 20.6,
+        "predicted": true
+      },
+      {
+        "Year": 2035,
+        "Africas Share of World Population": 21.1,
+        "predicted": true
+      },
+      {
+        "Year": 2040,
+        "Africas Share of World Population": 23.4,
+        "predicted": true
+      },
+      {
+        "Year": 2045,
+        "Africas Share of World Population": 24.8,
+        "predicted": true
+      },
+      {
+        "Year": 2050,
+        "Africas Share of World Population": 26.3,
+        "predicted": true
+      },
+      {"Year": 2020, "Africas Share of World Population": 18.2},
+      {"Year": 2019, "Africas Share of World Population": 17},
+      {"Year": 2018, "Africas Share of World Population": 16.7},
+      {"Year": 2017, "Africas Share of World Population": 16.5},
+      {"Year": 2016, "Africas Share of World Population": 16.3},
+      {"Year": 2015, "Africas Share of World Population": 17},
+      {"Year": 2010, "Africas Share of World Population": 15.9},
+      {"Year": 2005, "Africas Share of World Population": 14.9},
+      {"Year": 2000, "Africas Share of World Population": 14.1},
+      {"Year": 1995, "Africas Share of World Population": 13.5},
+      {"Year": 1990, "Africas Share of World Population": 12.9},
+      {"Year": 1985, "Africas Share of World Population": 12.3},
+      {"Year": 1980, "Africas Share of World Population": 11.7},
+      {"Year": 1975, "Africas Share of World Population": 11.2},
+      {"Year": 1970, "Africas Share of World Population": 10.9},
+      {"Year": 1965, "Africas Share of World Population": 10.5},
+      {"Year": 1960, "Africas Share of World Population": 10.2},
+      {"Year": 1955, "Africas Share of World Population": 10}
+    ]
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "nominal"},
+    "y": {"field": "Africas Share of World Population", "type": "quantitative"},
+    "strokeDash": {"field": "predicted", "type": "nominal"}
+  },
+  "config": {}
+}

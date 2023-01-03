@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Chinese loans to African countries by sector from 2000-2020",
+    "fontSize": 12,
+    "subtitle": [
+      "Calculated using the total loan value in the top 15 sectors. Source: BU"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/china_loan_sector_distribution.csv"
+  },
+  "height": {"step": 18},
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "Sector", "type": "ordinal", "sort": "-x"},
+    "x": {
+      "aggregate": "sum",
+      "field": "Amount (USD billions)",
+      "title": "Total loan amount (USD billions)"
+    }
+  },
+  "config": {}
+}

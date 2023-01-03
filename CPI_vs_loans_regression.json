@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height":300,
+  "width":300,
+  "title": {
+    "text": "Corruption Perception Index vs Total loan value In Africa",
+    "fontSize": 12,
+    "subtitle": [
+      "CPI value in 2020 and total loan value from 2000-2020 in $millions. Source: Transparency International and BU"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_corruption_loans_noangola.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "x": {"field": "Corruption Perception Index", "type": "quantitative"},
+        "y": {
+          "field": "Total loan value (USD millions)",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "firebrick"},
+      "transform": [
+        {
+          "regression": "Total loan value (USD millions)",
+          "on": "Corruption Perception Index"
+        }
+      ],
+      "encoding": {
+        "x": {"field": "Corruption Perception Index", "type": "quantitative"},
+        "y": {
+          "field": "Total loan value (USD millions)",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "Total loan value (USD millions)",
+          "on": "Corruption Perception Index",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.3f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ],
+  "config": {}
+}

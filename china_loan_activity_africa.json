@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "China's total loan actvity in Africa from 2000-2020",
+    "fontSize": 12,
+    "subtitle": [
+      "Total value ($ millions) of Chinese loans to African countries from 2000-2020. Source: BU Global Development Policy Centre"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "width": 550,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_topojson.json",
+    "format": {"type": "topojson", "feature": "continent_Africa_subunits"}
+  },
+  "projection": {"type": "mercator"},
+  "transform": [
+    {
+      "lookup": "properties.geounit",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/CleanedAfricaLoanData.csv"
+        },
+        "key": "Country",
+        "fields": ["Total value (USD millions)"]
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "color": "lavender",
+    "stroke": "teal",
+    "strokeWidth": 0.7
+  },
+  "encoding": {
+    "color": {
+      "field": "Total value (USD millions)",
+      "type": "quantitative",
+      "scale": {"scheme": "lightmulti"}
+    },
+    "tooltip": [
+      {"field": "properties.geounit", "title": "Country"},
+      {
+        "field": "Total value (USD millions)",
+        "title": "Total loan value ($ millions)"
+      }
+    ]
+  },
+  "config": {}
+}

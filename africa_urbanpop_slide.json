@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 550,
+  "height": 400,
+  "view": {"stroke": "transparent"},
+  "title": {
+    "text": "Africa's Urbanisation",
+    "fontSize": 12,
+    "subtitle": [
+      "% of a country's population living in urban areas from 1960-2021. Source: The World Bank"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 1960,
+      "bind": {
+        "input": "range",
+        "min": 1960,
+        "max": 2021,
+        "step": 1,
+        "name": "Year:"
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_urban_data.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": "datum.Year == yearSelector"},
+    {
+      "lookup": "Country",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_topojson.json",
+          "format": {"type": "topojson", "feature": "continent_Africa_subunits"}
+        },
+        "key": "properties.geounit",
+        "fields": ["properties", "geometry", "type"]
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "mark": "geoshape",
+  "encoding": {
+    "tooltip": [
+      {"field": "properties.geounit", "title": "Country"},
+      {"field": "Value", "title": "Urban population (% of total)"}
+    ],
+    "color": {
+      "field": "Value",
+      "legend": {"title": null, "orient": "right", "direction": "vertical"},
+      "type": "quantitative",
+      "scale": {
+        "scheme": "lightmulti",
+        "domain":[0,100]}
+    }
+  },
+  "config": {}
+}

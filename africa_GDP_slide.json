@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 550,
+  "height": 400,
+  "view": {"stroke": "transparent"},
+  "title": {
+    "text": "Africa's Income Growth",
+    "fontSize": 12,
+    "subtitle": ["GDP per capita by country from 1980-2021. Source: The World Bank"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 1980,
+        "max": 2021,
+        "step": 1,
+        "name": "Year:"
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_GDP_data.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": "datum.Year == yearSelector"},
+    {
+      "lookup": "Country",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_topojson.json",
+          "format": {"type": "topojson", "feature": "continent_Africa_subunits"}
+        },
+        "key": "properties.geounit",
+        "fields": ["properties", "geometry", "type"]
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "mark": "geoshape",
+  "encoding": {
+    "tooltip": [
+      {"field": "properties.geounit", "title": "Country"},
+      {"field": "Value", "title": "GDP per capita"}
+    ],
+    "color": {
+      "field": "Value",
+      "legend": {"title": null, "orient": "right", "direction": "vertical"},
+      "type": "quantitative",
+      "scale": {"scheme": "lightmulti", 
+      "domain":[100,12000]}
+    }
+  },
+  "config": {}
+}

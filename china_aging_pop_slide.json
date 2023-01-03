@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The Aging of China",
+    "fontSize": 12,
+    "subtitle": [
+      "The number of people in each age range e.g. 0-4 years old is in bar 0. Source: US Census Bureau API"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 1990,
+      "bind": {
+        "input": "range",
+        "min": 1990,
+        "max": 2100,
+        "step": 1,
+        "name": "Year:"
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/number_china_merged2.json"
+  },
+  "transform": [
+    {"filter": "datum.Year == yearSelector"},
+    {"calculate": "datum.Sex == 2 ? 'Female' : 'Male'", "as": "Gender"}
+  ],
+  "spacing": 0,
+  "hconcat": [
+    {
+      "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
+      "title": "Female",
+      "mark": "bar",
+      "encoding": {
+        "y": {"field": "Age", "axis": null, "sort": "descending"},
+        "x": {
+          "aggregate": "sum",
+          "field": "People",
+          "title": "Population",
+          "axis": {"format": "s"},
+          "sort": "descending"
+        },
+        "color": {
+          "field": "Gender",
+          "scale": {"range": ["#675193", "#ca8861"]},
+          "legend": null
+        }
+      }
+    },
+    {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {"type": "text", "align": "center"},
+      "encoding": {
+        "y": {
+          "field": "Age",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
+        },
+        "text": {"field": "Age", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+      "title": "Male",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Age",
+          "title": null,
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "People",
+          "title": "Population",
+          "axis": {"format": "s"}
+        },
+        "color": {"field": "Gender", "legend": null}
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}, "axis": {"grid": false}}
+}
