@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Document</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+</head>
+
+<body>
+    <div class="section1">
+        <h1>Why has China invested heavily in Africa?</h1>
+        <p></p>
+    </div>
+    <br>
+    <div class="section2">
+        <h3>Project aims</h3>
+        <p>This data science project aims to show, through data, some of the main motivations driving China's significant 21st century investment in Africa. Discussing China’s reasons for their African investment is important as the country is a major global player and its actions have significant economic and political implications for the continent and the rest of the world. I will be defining Chinese investment as the provision of loans and other direct investments in businesses and infrastructure projects.</p>
+        <p></p>
+    </div>
+    <br>
+    <div class="section3">
+      <h3>Chinese Investment</h3>
+      <p>This first set of visualisations seeks to describe and quantify China's investment in the region. The simple line chart compares Chinese and US FDI flows and is from <a href="http://www.sais-cari.org/chinese-investment-in-africa">this</a> dataset.</p>
+      <div class="chart" id="Chart1"></div>
+      <p></p>
+      <p>This next bar chart shows the purpose of Chinese loans in Africa which have totalled $160 billion from 2000 to 2020 according to the CLA Database run by Boston University. I chose the top 15 sectors as there were many more with relatively insignificant values. The data for this chart and the choropleth below was sourced from <a href="https://www.bu.edu/gdp/chinese-loans-to-africa-database/">here.</a> </p>
+      <div class="chart" id="Chart2"></div>
+      <p></p>
+      <p>This is the first choropleth in my project which involved me overlaying an Africa topoJSON with the data from the CLA Database. I cleaned the data in excel and summed the loans by recipient country to give me <a href="https://github.com/eab1/eab1.github.io/blob/main/CleanedAfricaLoanData.csv">this</a> csv. Angola is a clear outlier in the value of loans it has received and this is down to its abundance of natural resources such as crude oil and diamonds which help China to support its domestic demand and economic growth.</p>
+      <div class="chart" id="Chart3"></div>
+      <p></p>
+    </div>
+    <br>
+  <div class="section4">
+   <h3>Demographics and population factors</h3>
+    <p>The contrast between China's ageing population, with an average age of 38, and Africa's youthful population, with an average age of 18, presents an opportunity for China to tap into the continent's cheap labour force and growing consumer market. This investment has helped to support China's economic growth and will continue to do so despite the country facing a declining active workforce. <br><br> The population pyramid was the most difficult visualisation to create as gathering and formatting the data correctly involved many steps. I used the US census bureau API data for my historical and future data which required me to learn how to access the <a href="https://api.census.gov/data/timeseries/idb/5year.html">API</a> and then modify the looping template on <a href="https://colab.research.google.com/drive/1TFcczu1f9qFZNXstBlERAqB3HSrhmny_#scrollTo=OUvVkeJfcfJU">Colab</a> to loop through every age group and download the individual male and female data. This left me with 20 JSON files for male and female respectively which I then merged into one JSON using <a href="https://dashboard.data.gov/merge">this</a> online merger. I then converted this merged file into an excel file and cleaned the data into the appropriate <a href="https://github.com/eab1/eab1.github.io/blob/main/number_china_merged2.json">format</a> so vega could read and process it.</p>
+    <div class="chart" id="Chart4"></div>
+    <p></p>
+    <p>The second visualisation of Africa's population boom, the fastest of any continent, further enhances the appeal of investing in the region due to its increasing youthful population and access to cheap labour. <br><br> I had to scrape the data for this graph from <a href="https://www.worldometers.info/world-population/africa-population/">here</a> using pandas on <a href="https://colab.research.google.com/drive/1xVTxbqvtXgrOQJolA53H9ilOrUpR1jdv">this</a> Colab notebook as it was the perfect opportunity to practice scraping. Cleaning the data was difficult and involved dropping columns and removing commas and % signs from the tables as well as merging the tables for historical and projected population values into one. I had to rewatch the lectures to learn how to effectviely use pandas.</p>
+    <div class="chart" id="Chart5"></div>
+    <p></p>
+</div>
+<br>
+<div class="section5">
+  <h3>Africa’s rising middle class and urbanisation</h3>
+  <p>The next choropleths were also a challenge to create due to their year slider at the bottom which I solved through going to multiple office hours. The raw structure of <a href="https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_topojson.json">my topoJSON</a> was different to the example we used in class so it took me a lot of help and trial and error to work out how to access the correct arrays in the file. I then matched the topoJSON file with data from <a href="https://databank.worldbank.org/source/world-development-indicators">The World Bank</a> which was then cleaned in Excel which involved changing country names so they matched the ones used in the topoJSON. <a href="https://github.com/eab1/eab1.github.io/blob/main/africa_urban_data.csv">Here</a> is the csv for the first choropleth and <a href="https://github.com/eab1/eab1.github.io/blob/main/africa_GDP_data.csv">here</a> is the csv for the second. </p>
+  <div class="chart" id="Chart6"></div>
+  <p></p>
+  <p>Another motivation behind China’s heavy investment strategy in Africa is the continents drastic urbanisation and rising middle class, as displayed in these visualisations. As Africa’s middle class and cities grow, there is an increasing demand for consumer goods and services and infrastructure projects, which creates business opportunities for Chinese firms as it allows them to tap into this greater consumption driven by higher incomes and living standards.</p>
+  <div class="chart" id="Chart7"></div>
+  <p></p>
+</div>
+<br>
+<div class="section6">
+  <h3>Political influence</h3>
+  <p>This graph explores the relationship between a government's perceived level of corruption and the total loan value it received from 2000-2020. The weak correlation between the two variables as indicated by a low R2 value suggest China does not favour investing in countries with a certain level of corruption but rather their FDI is spread across a wide range of corruption level rankings. China's investment strategy allows them to forge business relationships with a variety of countries, supporting their aim of increasing political influence in the continent. The data on corruption is from <a href="https://www.transparency.org/en/cpi/2020">this</a> website and <a href="https://github.com/eab1/eab1.github.io/blob/main/africa_corruption_loans_noangola.csv">this</a> is the combined data csv which omits Angola it is an outlier in its own right.</p>
+  <div class="chart" id="Chart8"></div>
+  <p></p>
+</div>
+<br>
+<div class="section7">
+  <h3>Conclusion</h3>
+  <p>In conclusion, China's significant investment in Africa is a result of a multitude of factors which both push businesses from China and pull them towards Africa. I believe the contrasting demographic changes occuring in each region, the abundance of African natural resources, Africa's growing middle class and the forging of political alliances are all key reasons behind this transformational investment.  </p>
+  <p></p>
+</div>
+
+  
+  
+
+  </div>
+  <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+      <a href="index.html"><span><i class="material-symbols-outlined">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;home</span></a><br>
+      <a href="portfolio.html"><span><i class="material-symbols-outlined">folder_open</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;portfolio</span></a><br>
+      <a href="https://github.com/eab1/eab1.github.io"><span><i class="material-symbols-outlined">hub</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;GitHub</span></a><br>
+  </div>
+   <div id="main" ></div>
+
+<!--Here is the JS code-->  
+
+   <script>
+
+    var myChart1 = "actual_project/US_vs_china_FDI.json";
+    var myChart2 = "actual_project/chinese_investment_sector_bar.json";
+    var myChart3 = "actual_project/china_loan_activity_africa.json";
+    var myChart4 = "actual_project/china_aging_pop_slide.json";
+    var myChart5 = "actual_project/africa_globalpop_share.json";
+    var myChart6 = "actual_project/africa_urbanpop_slide.json";
+    var myChart7 = "actual_project/africa_GDP_slide.json";
+    var myChart8 = "actual_project/CPI_vs_loans_regression.json";
+   
+
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3);
+    vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
+    vegaEmbed('#Chart7', myChart7);
+    vegaEmbed('#Chart8', myChart8);
+
+    // This is the JS for the sidebar
+var mini = true;
+
+function toggleSidebar() {
+    if (mini) {
+        console.log("opening sidebar");
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        this.mini = false;
+    } else {
+        console.log("closing sidebar");
+        document.getElementById("mySidebar").style.width = "75px";
+        document.getElementById("main").style.marginLeft = "75px";
+        this.mini = true;
+    }
+}
+    </script>
+
+</body>
+
+</html>

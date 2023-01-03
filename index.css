@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+body {
+  font-family: impact;
+  background-image: url('africaglobe.jpg');
+}
+
+h1, p{
+  color:rgb(210, 210, 210);
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+}
+
+h3{
+  color:rgb(210, 210, 210);
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+}
+
+a{
+  display: block;
+  text-align: center;
+  width: 20%;
+  margin:20px;
+  margin: auto;
+}  
+
+.center-text {
+  text-align: center;
+}
+
+a.center-text {
+  display: block;
+}
+
+#link1{
+  background-color: rgba(32,42,68);
+  padding:20px;
+  border:2px;
+  border-color:rgb(255,184,28);
+  border-style: solid;
+  border-radius: 10px;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight:700;
+  color:white;
+  text-decoration: none;
+}
+  
+
+#link1:hover{
+  background-color: rgb(32,42,68, .5);
+  border:2px;
+  border-color:rgb(255,184,28);
+  border-style: solid;
+}
+
+#link2{
+  background-color: rgba(32,42,68);
+  padding:20px;
+  border:2px;
+  border-color:rgb(255,184,28);
+  border-style: solid;
+  border-radius: 10px;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight:700;
+  color:white;
+  text-decoration: none;
+}
+
+#link2:hover{
+  background-color: rgb(32,42,68, .5);
+  border:2px;
+  border-color:rgb(255,184,28);
+  border-style: solid;
+}
+
+#link3{
+  background-color: rgba(32,42,68);
+  padding:20px;
+  border:2px;
+  border-color:rgb(255,184,28);
+  border-style: solid;
+  border-radius: 10px;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight:700;
+  color:white;
+  text-decoration: none;
+}
+
+#link3:hover{
+  background-color: rgb(32,42,68, .5);
+  border:2px;
+  border-color:rgb(255,184,28);
+  border-style: solid;
+}
