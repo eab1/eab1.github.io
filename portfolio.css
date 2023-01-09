@@ -66,18 +66,7 @@ h1, h2, h3, p{
             padding: 16px;
             margin-left: 100px;
         }
-        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
         
-        @media screen and (max-height: 500px) {
-            .sidebar {
-                padding-top: 15px;
-                width: 40px;
-                height: 50%;
-            }
-            .sidebar a {
-                font-size: 18px;
-            }
-        }
 
 /* This code is to customise the week classes */
 
@@ -723,5 +712,12 @@ img{
     border-radius: 5px;
     border-color:rgb(255,184,28);
 }
-
+    .sidebar {
+        padding-top: 15px;
+        width: 40px;
+        height: 50%;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
 }
