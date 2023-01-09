@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "US Inequality from 1970 to 2021",
+    "fontSize": 12,
+    "subtitle": [
+      "Displayed by the bottom 50% and top 10% share of pre-tax national income. Source: WID"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/US_inequality.csv"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "Share", "type": "quantitative"},
+    "color": {"field": "Percentile", "type": "nominal"}
+  },
+  "config": {}
+}
