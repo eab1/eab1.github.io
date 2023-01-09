@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "GDP per capita vs CO2 emissions in the G20",
+    "fontSize": 12,
+    "subtitle": ["Both per capita values. Source: The World Bank"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/gdp_co2_fertility2.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "x": {"field": "GDP per capita (current US$)", "type": "quantitative"},
+        "y": {
+          "field": "CO2 emissions (metric tons per capita)",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "firebrick"},
+      "transform": [
+        {
+          "regression": "CO2 emissions (metric tons per capita)",
+          "on": "GDP per capita (current US$)"
+        }
+      ],
+      "encoding": {
+        "x": {"field": "GDP per capita (current US$)", "type": "quantitative"},
+        "y": {
+          "field": "CO2 emissions (metric tons per capita)",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "CO2 emissions (metric tons per capita)",
+          "on": "GDP per capita (current US$)",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.3f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ],
+  "config": {}
+}
