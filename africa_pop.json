@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 650,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_topojson.json",
+    "format": {"type": "topojson", "feature": "continent_Africa_subunits"}
+  },
+  "projection": {"type": "mercator"},
+  "transform": [
+    {
+      "lookup": "properties.geounit",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_population.csv"
+        },
+        "key": "Country",
+        "fields": ["Population in 2022"]
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "color": "lavender",
+    "stroke": "teal",
+    "strokeWidth": 0.7
+  },
+  "encoding": {
+    "color": {
+      "field": "Population in 2022",
+      "type": "quantitative",
+      "scale": {"scheme": "yelloworangered"}
+    },
+    "tooltip": [
+      {"field": "properties.geounit", "title": "Country"},
+      {"field": "Population in 2022", "title": "Population"}
+    ]
+  },
+  "config": {}
+}
