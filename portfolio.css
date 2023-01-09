@@ -416,11 +416,7 @@ img{
 
   @media only screen and (max-width: 500px) {
 
-    body{
-      max-width: 80%;
-      margin: auto;
-    }
-
+    
     .chart{
         background-color: white;
         width: 300px;
