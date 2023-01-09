@@ -70,7 +70,8 @@ h1, h2, h3, p{
         
         @media screen and (max-height: 450px) {
             .sidebar {
-                padding-top: 15px;
+                padding-top: 5px;
+                padding-left: 5px;
             }
             .sidebar a {
                 font-size: 18px;
@@ -636,7 +637,7 @@ img{
       }
 .myWeek1{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -646,7 +647,7 @@ img{
 
 .myWeek2{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -656,7 +657,7 @@ img{
 
 .myWeek3{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -666,7 +667,7 @@ img{
 
 .myWeek4{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -676,7 +677,7 @@ img{
 
 .myWeek5{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -686,7 +687,7 @@ img{
 
 .myWeek7{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -696,7 +697,7 @@ img{
 
 .myWeek8{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -705,7 +706,7 @@ img{
 }
 .myWeek9{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
@@ -714,7 +715,7 @@ img{
 }
 .myWeek10{
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     background-color: rgb(220, 220, 220);
     border-width: 3px;
     border-style: solid;
