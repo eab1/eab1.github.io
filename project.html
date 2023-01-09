@@ -25,9 +25,6 @@
     <div class="section1">
         <h1>Why has China invested heavily in Africa?</h1>
         <p></p>
-    </div>
-    <br>
-    <div class="section2">
         <h3>Project aims</h3>
         <p>This data science project aims to show, through data, some of the main motivations driving China's significant 21st century investment in Africa. Discussing China’s reasons for their African investment is important as the country is a major global player and its actions have significant economic and political implications for the continent and the rest of the world. I will be defining Chinese investment as the provision of loans and other direct investments in businesses and infrastructure projects.</p>
         <p></p>
@@ -35,23 +32,23 @@
     <br>
     <div class="section3">
       <h3>Chinese Investment</h3>
-      <p>This first set of visualisations seeks to describe and quantify China's investment in the region. The simple line chart compares Chinese and US FDI flows and is from <a href="http://www.sais-cari.org/chinese-investment-in-africa">this</a> dataset.</p>
+      <p>This first set of visualisations seeks to describe and quantify China's investment in the region which have totalled $160 billion from 2000 to 2020. The simple line chart compares Chinese and US FDI flows and is from <a href="http://www.sais-cari.org/chinese-investment-in-africa">this</a> dataset. <a href="https://raw.githubusercontent.com/eab1/eab1.github.io/main/china_vs_usa_flow_investment%20.csv">CSV.</a> The second and third chart data source is <a href="https://www.bu.edu/gdp/chinese-loans-to-africa-database/">here.</a></p>
       <div class="chart" id="Chart1"></div>
       <p></p>
-      <p>This next bar chart shows the purpose of Chinese loans in Africa which have totalled $160 billion from 2000 to 2020 according to the CLA Database run by Boston University. I chose the top 15 sectors as there were many more with relatively insignificant values. The data for this chart and the choropleth below was sourced from <a href="https://www.bu.edu/gdp/chinese-loans-to-africa-database/">here.</a> </p>
+      <p><a href="https://github.com/eab1/eab1.github.io/blob/main/china_loan_sector_distribution.csv">CSV</a> for second chart.</p>
       <div class="chart" id="Chart2"></div>
       <p></p>
-      <p>This is the first choropleth in my project which involved me overlaying an Africa topoJSON with the data from the CLA Database. I cleaned the data in excel and summed the loans by recipient country to give me <a href="https://github.com/eab1/eab1.github.io/blob/main/CleanedAfricaLoanData.csv">this</a> csv. Angola is a clear outlier in the value of loans it has received and this is down to its abundance of natural resources such as crude oil and diamonds which help China to support its domestic demand and economic growth.</p>
+      <p>This is the first choropleth in my project which involved me overlaying an Africa topoJSON with the data from the CLA Database. I cleaned the data in excel and summed the loans by recipient country to give me <a href="https://github.com/eab1/eab1.github.io/blob/main/CleanedAfricaLoanData.csv">this</a> csv. Angola is a clear outlier in the value of loans it has received and this is down to its abundance of natural resources such as crude oil and diamonds and strategic trade location on the Atlantic coast which help China to support its domestic demand and economic growth.</p>
       <div class="chart" id="Chart3"></div>
       <p></p>
     </div>
     <br>
   <div class="section4">
    <h3>Demographics and population factors</h3>
-    <p>The contrast between China's ageing population, with an average age of 38, and Africa's youthful population, with an average age of 18, presents an opportunity for China to tap into the continent's cheap labour force and growing consumer market. This investment has helped to support China's economic growth and will continue to do so despite the country facing a declining active workforce. <br><br> The population pyramid was the most difficult visualisation to create as gathering and formatting the data correctly involved many steps. I used the US census bureau API data for my historical and future data which required me to learn how to access the <a href="https://api.census.gov/data/timeseries/idb/5year.html">API</a> and then modify the looping template on <a href="https://colab.research.google.com/drive/1TFcczu1f9qFZNXstBlERAqB3HSrhmny_#scrollTo=OUvVkeJfcfJU">Colab</a> to loop through every age group and download the individual male and female data. This left me with 20 JSON files for male and female respectively which I then merged into one JSON using <a href="https://dashboard.data.gov/merge">this</a> online merger. I then converted this merged file into an excel file and cleaned the data into the appropriate <a href="https://github.com/eab1/eab1.github.io/blob/main/number_china_merged2.json">format</a> so vega could read and process it.</p>
+    <p>The contrast between China's ageing population, with an average age of 38, and Africa's youthful population, with an average age of 18, presents an opportunity for China to tap into the continent's cheap labour force and growing consumer market. This investment has helped to support China's economic growth and will continue to do so despite the country facing a declining active workforce. <br><br> The population pyramid was the most difficult visualisation to create as gathering and formatting the data correctly involved many steps. Through Youtube and <a href="https://www.census.gov/data/developers/guidance/api-user-guide.Overview.html#list-tab-2080675447">documentation,</a> I learnt how to use the US census bureau <a href="https://api.census.gov/data/timeseries/idb/5year.html">API</a> for my historical and future data and then modify the looping template on <a href="https://colab.research.google.com/drive/1TFcczu1f9qFZNXstBlERAqB3HSrhmny_#scrollTo=OUvVkeJfcfJU">Colab</a> to loop through every age group and download the individual male and female data. This left me with 20 JSON files for male and female respectively which I then merged into one JSON using <a href="https://dashboard.data.gov/merge">this</a> online merger. I then converted this merged file into an excel file and cleaned the data into the appropriate <a href="https://github.com/eab1/eab1.github.io/blob/main/number_china_merged2.json">format</a> so vega could read and process it.</p>
     <div class="chart" id="Chart4"></div>
     <p></p>
-    <p>The second visualisation of Africa's population boom, the fastest of any continent, further enhances the appeal of investing in the region due to its increasing youthful population and access to cheap labour. <br><br> I had to scrape the data for this graph from <a href="https://www.worldometers.info/world-population/africa-population/">here</a> using pandas on <a href="https://colab.research.google.com/drive/1xVTxbqvtXgrOQJolA53H9ilOrUpR1jdv">this</a> Colab notebook as it was the perfect opportunity to practice scraping. Cleaning the data was difficult and involved dropping columns and removing commas and % signs from the tables as well as merging the tables for historical and projected population values into one. I had to rewatch the lectures to learn how to effectviely use pandas.</p>
+    <p>The second visualisation of Africa's population boom, the fastest of any continent, further enhances the appeal of investing in the region due to its increasing youthful population and access to cheap labour. <br><br> I had to scrape the data for this graph from <a href="https://www.worldometers.info/world-population/africa-population/">here</a> using pandas on <a href="https://colab.research.google.com/drive/1xVTxbqvtXgrOQJolA53H9ilOrUpR1jdv">this</a> Colab notebook as it was the perfect opportunity to practice scraping. Cleaning the data was difficult and involved dropping columns and removing commas and % signs from the tables as well as merging the tables for historical and projected population values into one. I had to rewatch the lectures to overcome this challenge.</p>
     <div class="chart" id="Chart5"></div>
     <p></p>
 </div>
@@ -61,21 +58,21 @@
   <p>The next choropleths were also a challenge to create due to their year slider at the bottom which I solved through going to multiple office hours. The raw structure of <a href="https://raw.githubusercontent.com/eab1/eab1.github.io/main/africa_topojson.json">my topoJSON</a> was different to the example we used in class so it took me a lot of help and trial and error to work out how to access the correct arrays in the file. I then matched the topoJSON file with data from <a href="https://databank.worldbank.org/source/world-development-indicators">The World Bank</a> which was then cleaned in Excel which involved changing country names so they matched the ones used in the topoJSON. <a href="https://github.com/eab1/eab1.github.io/blob/main/africa_urban_data.csv">Here</a> is the csv for the first choropleth and <a href="https://github.com/eab1/eab1.github.io/blob/main/africa_GDP_data.csv">here</a> is the csv for the second. </p>
   <div class="chart" id="Chart6"></div>
   <p></p>
-  <p>Another motivation behind China’s heavy investment strategy in Africa is the continents drastic urbanisation and rising middle class, as displayed in these visualisations. As Africa’s middle class and cities grow, there is an increasing demand for consumer goods and services and infrastructure projects, which creates business opportunities for Chinese firms as it allows them to tap into this greater consumption driven by higher incomes and living standards.</p>
+  <p>As Africa’s middle class and cities grow, there is an increasing demand for consumer goods and services and infrastructure projects, creating business opportunities for Chinese firms.</p>
   <div class="chart" id="Chart7"></div>
   <p></p>
 </div>
 <br>
 <div class="section6">
   <h3>Political influence</h3>
-  <p>This graph explores the relationship between a government's perceived level of corruption and the total loan value it received from 2000-2020. The weak correlation between the two variables as indicated by a low R2 value suggest China does not favour investing in countries with a certain level of corruption but rather their FDI is spread across a wide range of corruption level rankings. China's investment strategy allows them to forge business relationships with a variety of countries, supporting their aim of increasing political influence in the continent. The data on corruption is from <a href="https://www.transparency.org/en/cpi/2020">this</a> website and <a href="https://github.com/eab1/eab1.github.io/blob/main/africa_corruption_loans_noangola.csv">this</a> is the combined data csv which omits Angola it is an outlier in its own right.</p>
+  <p>This graph explores the relationship between a government's perceived level of corruption and the total loan value it received from 2000-2020. The weak correlation between the two variables as indicated by a low R2 value suggest China does not favour investing in countries with a certain level of corruption but rather their FDI is spread across a wide range of corruption level rankings. China's investment strategy allows them to forge business relationships with a variety of countries, supporting their aim of increasing political influence in the continent. Here is the <a href="https://www.transparency.org/en/cpi/2020">corruption data</a> and combined <a href="https://github.com/eab1/eab1.github.io/blob/main/africa_corruption_loans_noangola.csv">CSV.</a></p>
   <div class="chart" id="Chart8"></div>
   <p></p>
 </div>
 <br>
 <div class="section7">
   <h3>Conclusion</h3>
-  <p>In conclusion, China's significant investment in Africa is a result of a multitude of factors which both push businesses from China and pull them towards Africa. I believe the contrasting demographic changes occuring in each region, the abundance of African natural resources, Africa's growing middle class and the forging of political alliances are all key reasons behind this transformational investment.  </p>
+  <p>In conclusion, the motivations behind China's significant investment in Africa are multifaceted and can be understood by various push and pull factors. These include demographic changes in both regions, Africa's abundant natural resources, the growth of its middle class and cities, and the formation of political alliances. </p>
   <p></p>
 </div>
 

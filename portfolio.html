@@ -99,6 +99,28 @@
             <div class="chart" id="Chart20"></div>
             <p>The US graph strongly supports this statement as the income disparity between the top 10% and bottom 50% is increasing while the UK graph supports the statement but with less clear evidence. Since 2015 in the UK the top 10% income share has remained relatively stable.</p>
         </div>
+        <br>
+        <div class="myWeek9">
+            <h1>Week 9</h1>
+            <h3>Advanced charts</h3>
+            <div class="chart" id="Chart21"></div>
+            <p></p>
+            <div class="chart" id="Chart22"></div>
+            <p></p>
+        </div>
+        <br>
+        <div class="myWeek10">
+            <h1>Week 10/11</h1>
+            <h3>Supervised machine learning</h3>
+            <p>Hypothesis: Using supervised machine learning run a regression of life expectancy on GDP per capita to predict relationship. I expect a postive relationship.</p>
+             <img src="regression.jpg">
+            <p><a href="https://colab.research.google.com/drive/1HBKBfjNgO-LctaEvnT5IZluhTIUQtUgR#scrollTo=_nyuQEWy5rKG">Here</a> is the Colab link. The results appear to confirm this positive relationship.</p>
+            <h3>Unsupervised learning</h3>
+            <p>Hypothesis: Using unsupervised machine learning, countries can be clustered into 4 groups based on their current account balance and life expectancy. I expect the clusters to show that life expectancy does not depend on a country's current account balance.</p>
+            <img src="cluster.jpg">
+            <p><a href="https://colab.research.google.com/drive/13S2PY7LxwLyfu6p5sFoQfRExtuzrppJL#scrollTo=c3Rxnslj8mwH">Here</a> is the Colab link. The results show that current account balance has no significant relationship with life expectancy.</p>
+            <p></p>
+        </div>
 
 <!--These lines are for the sidebar which can be found here: https://medium.com/@9cv9official/create-a-beautiful-hover-triggered-expandable-sidebar-with-simple-html-css-and-javascript-9f5f80a908d1-->
     </div>
@@ -132,6 +154,9 @@
     var myChart18 = "week7/africa_pop.json";
     var myChart19 = "week8/UK_inequality.json";
     var myChart20 = "week8/US_inequality.json";
+    var myChart22 = "week9/gdp_vs_fertility.json";
+    var myChart21 = "actual_project/CPI_vs_loans_regression.json";
+
     
     
 
@@ -155,6 +180,9 @@
     vegaEmbed('#Chart18', myChart18);
     vegaEmbed('#Chart19', myChart19);
     vegaEmbed('#Chart20', myChart20);
+    vegaEmbed('#Chart21', myChart21);
+    vegaEmbed('#Chart22', myChart22);
+   
 
 // This is the JS for the sidebar
 var mini = true;
