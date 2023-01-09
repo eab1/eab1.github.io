@@ -420,6 +420,7 @@ img{
       max-width: 80%;
       margin: auto;
     }
+
     .chart{
         background-color: white;
         width: 300px;
@@ -637,5 +638,92 @@ img{
         overflow: scroll;
         max-width: 350px;
       }
+.myWeek1{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+
+.myWeek2{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+
+.myWeek3{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+
+.myWeek4{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+
+.myWeek5{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+
+.myWeek7{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+
+.myWeek8{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+.myWeek9{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
+.myWeek10{
+    margin: auto;
+    max-width: 80%;
+    background-color: rgb(220, 220, 220);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(255,184,28);
+}
 
 }
