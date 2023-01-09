@@ -6,18 +6,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Title for the page -->
     <title>Document</title>
 
     <!-- Link to my style sheet -->
     <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!--The next three lines allow the Vega embed-->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
 
 </head>
 
@@ -32,7 +33,7 @@
         <p>My second chart shows changes in forest area over time for 5 countries.</p>
         <div class="chart" id="Chart2"></div>
         <p></p>
-    </div> 
+    </div>
     <br>
     <div class="myWeek2">
         <h1>Week 2</h1>
@@ -44,24 +45,29 @@
         <p>This chart shows how total outstanding credit as a proportion of global GDP has changed from 1984-2022.</p>
         <div class="chart" id="Chart4"></div>
         <p>The riskiest year is 1985 as it has the highest credit outstanding value as a proportion of global GDP.</p>
-    </div> 
+    </div>
     <br>
     <div class="myWeek3">
         <h1>Week 3</h1>
         <h3>Python task</h3>
         <div class="chart" id="Chart5"></div>
-        <p>Here is my first week 3 chart which shows how the Dow Jones Industrial Average, S&P 500 and the Nasdaq have changed over time (measured in $) as represented using one visualisation per index in a column format.</p>
+        <p>Here is my first week 3 chart which shows how the Dow Jones Industrial Average, S&P 500 and the Nasdaq have
+            changed over time (measured in $) as represented using one visualisation per index in a column format.</p>
         <div class="chart" id="Chart6"></div>
-        <p>The second visualisation uses the dimension of colour which was chosen as it displays the data in a more efficient and comparable manner.</p>
-    </div> 
+        <p>The second visualisation uses the dimension of colour which was chosen as it displays the data in a more
+            efficient and comparable manner.</p>
+    </div>
     <br>
     <div class="myWeek4">
         <h1>Week 4</h1>
         <h3>Data scraper: pandas</h3>
         <div class="chart" id="Chart7"></div>
-        <p>This visualisation was created by scraping a table from a website titled indexmundi which had a table on the World Bank estimates for GINI indexes in Europe. I chose this site as it had a table that was scrapable.</p>
-        <p><a href="https://colab.research.google.com/drive/1uPJEwr8j7kbwR5nojvm2h-Y5iN7wkRvf#scrollTo=pLhHP2l_xT2s">Here</a> is the link to my week 4 Google Colab notebook.</p>
-    </div> 
+        <p>This visualisation was created by scraping a table from a website titled indexmundi which had a table on the
+            World Bank estimates for GINI indexes in Europe. I chose this site as it had a table that was scrapable.</p>
+        <p><a
+                href="https://colab.research.google.com/drive/1uPJEwr8j7kbwR5nojvm2h-Y5iN7wkRvf#scrollTo=pLhHP2l_xT2s">Here</a>
+            is the link to my week 4 Google Colab notebook.</p>
+    </div>
     <br>
     <div class="myWeek5">
         <h1>Week 5</h1>
@@ -75,131 +81,146 @@
         <div class="chart" id="Chart14"></div>
         <div class="chart" id="Chart15"></div>
         <div class="chart" id="Chart16"></div>
-        <p><a href="https://colab.research.google.com/drive/1vwB77ocE1nUtUlk2JDi37QAK2JxTqRIu">Here</a> is the link to my week 5 Google Colab notebook.</p>
-        </div>
-        <br>
-        <div class="myWeek7">
-            <h1>Week 7</h1>
-            <h3>Africa</h3>
-            <p>This graphic displays an interactive map of Africa.</p>
-            <div class="chart" id="Chart17"></div>
-    
-            <h3>Population by Country</h3>
-            <p>This choropleth overlays population data for each country on the previous map.</p>
-            <div class="chart" id="Chart18"></div>
-            <p></p>
-        </div>
-        <br>
-        <div class="myWeek8">
-            <h1>Week 8</h1>
-            <h3>Economics Observatory Talk: Growth for Good</h3>
-            <p>Alessio Terzi said that inequality in developed economies is rising so I will look at how this has changed in the UK and US over time.</p>
-            <div class="chart" id="Chart19"></div>
-            <p></p>
-            <div class="chart" id="Chart20"></div>
-            <p>The US graph strongly supports this statement as the income disparity between the top 10% and bottom 50% is increasing while the UK graph supports the statement but with less clear evidence. Since 2015 in the UK the top 10% income share has remained relatively stable.</p>
-        </div>
-        <br>
-        <div class="myWeek9">
-            <h1>Week 9</h1>
-            <h3>Advanced charts</h3>
-            <div class="chart" id="Chart21"></div>
-            <p></p>
-            <div class="chart" id="Chart22"></div>
-            <p></p>
-        </div>
-        <br>
-        <div class="myWeek10">
-            <h1>Week 10/11</h1>
-            <h3>Supervised machine learning</h3>
-            <p>Hypothesis: Using supervised machine learning run a regression of life expectancy on GDP per capita to predict relationship. I expect a postive relationship.</p>
-             <img src="regression.jpg">
-            <p><a href="https://colab.research.google.com/drive/1HBKBfjNgO-LctaEvnT5IZluhTIUQtUgR#scrollTo=_nyuQEWy5rKG">Here</a> is the Colab link. The results appear to confirm this positive relationship.</p>
-            <h3>Unsupervised learning</h3>
-            <p>Hypothesis: Using unsupervised machine learning, countries can be clustered into 4 groups based on their current account balance and life expectancy. I expect the clusters to show that life expectancy does not depend on a country's current account balance.</p>
-            <img src="cluster.jpg">
-            <p><a href="https://colab.research.google.com/drive/13S2PY7LxwLyfu6p5sFoQfRExtuzrppJL#scrollTo=c3Rxnslj8mwH">Here</a> is the Colab link. The results show that current account balance has no significant relationship with life expectancy.</p>
-            <p></p>
-        </div>
+        <p><a href="https://colab.research.google.com/drive/1vwB77ocE1nUtUlk2JDi37QAK2JxTqRIu">Here</a> is the link to
+            my week 5 Google Colab notebook.</p>
+    </div>
+    <br>
+    <div class="myWeek7">
+        <h1>Week 7</h1>
+        <h3>Africa</h3>
+        <p>This graphic displays an interactive map of Africa.</p>
+        <div class="chart" id="Chart17"></div>
 
-<!--These lines are for the sidebar which can be found here: https://medium.com/@9cv9official/create-a-beautiful-hover-triggered-expandable-sidebar-with-simple-html-css-and-javascript-9f5f80a908d1-->
+        <h3>Population by Country</h3>
+        <p>This choropleth overlays population data for each country on the previous map.</p>
+        <div class="chart" id="Chart18"></div>
+        <p></p>
+    </div>
+    <br>
+    <div class="myWeek8">
+        <h1>Week 8</h1>
+        <h3>Economics Observatory Talk: Growth for Good</h3>
+        <p>Alessio Terzi said that inequality in developed economies is rising so I will look at how this has changed in
+            the UK and US over time.</p>
+        <div class="chart" id="Chart19"></div>
+        <p></p>
+        <div class="chart" id="Chart20"></div>
+        <p>The US graph strongly supports this statement as the income disparity between the top 10% and bottom 50% is
+            increasing while the UK graph supports the statement but with less clear evidence. Since 2015 in the UK the
+            top 10% income share has remained relatively stable.</p>
+    </div>
+    <br>
+    <div class="myWeek9">
+        <h1>Week 9</h1>
+        <h3>Advanced charts</h3>
+        <div class="chart" id="Chart21"></div>
+        <p></p>
+        <div class="chart" id="Chart22"></div>
+        <p></p>
+    </div>
+    <br>
+    <div class="myWeek10">
+        <h1>Week 10/11</h1>
+        <h3>Supervised machine learning</h3>
+        <p>Hypothesis: Using supervised machine learning run a regression of life expectancy on GDP per capita to
+            predict relationship. I expect a postive relationship.</p>
+        <img src="regression.jpg">
+        <p><a
+                href="https://colab.research.google.com/drive/1HBKBfjNgO-LctaEvnT5IZluhTIUQtUgR#scrollTo=_nyuQEWy5rKG">Here</a>
+            is the Colab link. The results appear to confirm this positive relationship.</p>
+        <h3>Unsupervised learning</h3>
+        <p>Hypothesis: Using unsupervised machine learning, countries can be clustered into 4 groups based on their
+            current account balance and life expectancy. I expect the clusters to show that life expectancy does not
+            depend on a country's current account balance.</p>
+        <img src="cluster.jpg">
+        <p><a
+                href="https://colab.research.google.com/drive/13S2PY7LxwLyfu6p5sFoQfRExtuzrppJL#scrollTo=c3Rxnslj8mwH">Here</a>
+            is the Colab link. The results show that current account balance has no significant relationship with life
+            expectancy.</p>
+        <p></p>
+    </div>
+
+    <!--These lines are for the sidebar which can be found here: https://medium.com/@9cv9official/create-a-beautiful-hover-triggered-expandable-sidebar-with-simple-html-css-and-javascript-9f5f80a908d1-->
     </div>
     <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-        <a href="index.html"><span><i class="material-symbols-outlined">home</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;home</span></a><br>
-        <a href="project.html"><span><i class="material-symbols-outlined">question_mark</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;project</span></a><br>
-        <a href="https://github.com/eab1/eab1.github.io"><span><i class="material-symbols-outlined">hub</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;GitHub</span></a><br>
+        <a href="index.html"><span><i class="material-symbols-outlined">home</i><span
+                    class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;home</span></a><br>
+        <a href="project.html"><span><i class="material-symbols-outlined">question_mark</i><span
+                    class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;project</span></a><br>
+        <a href="https://github.com/eab1/eab1.github.io"><span><i class="material-symbols-outlined">hub</i><span
+                    class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;GitHub</span></a><br>
     </div>
-     <div id="main" ></div>
+    <div id="main"></div>
 
-     <!--The JavaScript code for the charts and sidebar-->
-<script>
+    <!--The JavaScript code for the charts and sidebar-->
+    <script>
 
-    var myChart1 = "week1/chartENV7renewableGeneration.json";
-    var myChart2 = "week1/chartENV14.json";
-    var myChart3 = "week2/imfloans.json";
-    var myChart4 = "week2/imfglobalgdp.json";
-    var myChart5 = "week3/indexes_column.json";
-    var myChart6 = "week3/indexes_colour.json";
-    var myChart7 = "week4/gini_europe.json";
-    var myChart8 = "week5/LF2F.json";
-    var myChart9 = "week5/LF2J.json";
-    var myChart10 = "week5/LF29.json";
-    var myChart11 = "week5/MGVM.json";
-    var myChart12 = "week5/YBVV.json";
-    var myChart13 = "week5/YBVX.json";
-    var myChart14 = "week5/YBVY.json";
-    var myChart15 = "week5/YCGN.json";
-    var myChart16 = "week5/YCGR.json";
-    var myChart17 = "week7/africa.json";
-    var myChart18 = "week7/africa_pop.json";
-    var myChart19 = "week8/UK_inequality.json";
-    var myChart20 = "week8/US_inequality.json";
-    var myChart22 = "week9/gdp_vs_fertility.json";
-    var myChart21 = "actual_project/CPI_vs_loans_regression.json";
+        var myChart1 = "chartENV7renewableGeneration.json";
+        var myChart2 = "chartENV14.json";
+        var myChart3 = "imfloans.json";
+        var myChart4 = "imfglobalgdp.json";
+        var myChart5 = "indexes_column.json";
+        var myChart6 = "indexes_colour.json";
+        var myChart7 = "gini_europe.json";
+        var myChart8 = "LF2F.json";
+        var myChart9 = "LF2J.json";
+        var myChart10 = "LF29.json";
+        var myChart11 = "MGVM.json";
+        var myChart12 = "YBVV.json";
+        var myChart13 = "YBVX.json";
+        var myChart14 = "YBVY.json";
+        var myChart15 = "YCGN.json";
+        var myChart16 = "YCGR.json";
+        var myChart17 = "africa.json";
+        var myChart18 = "africa_pop.json";
+        var myChart19 = "UK_inequality.json";
+        var myChart20 = "US_inequality.json";
+        var myChart22 = "gdp_vs_fertility.json";
+        var myChart21 = "CPI_vs_loans_regression.json";
 
-    
-    
 
-    vegaEmbed('#Chart1', myChart1);
-    vegaEmbed('#Chart2', myChart2);
-    vegaEmbed('#Chart3', myChart3);
-    vegaEmbed('#Chart4', myChart4);
-    vegaEmbed('#Chart5', myChart5);
-    vegaEmbed('#Chart6', myChart6);
-    vegaEmbed('#Chart7', myChart7);
-    vegaEmbed('#Chart8', myChart8);
-    vegaEmbed('#Chart9', myChart9);
-    vegaEmbed('#Chart10', myChart10);
-    vegaEmbed('#Chart11', myChart11);
-    vegaEmbed('#Chart12', myChart12);
-    vegaEmbed('#Chart13', myChart13);
-    vegaEmbed('#Chart14', myChart14);
-    vegaEmbed('#Chart15', myChart15);
-    vegaEmbed('#Chart16', myChart16);
-    vegaEmbed('#Chart17', myChart17);
-    vegaEmbed('#Chart18', myChart18);
-    vegaEmbed('#Chart19', myChart19);
-    vegaEmbed('#Chart20', myChart20);
-    vegaEmbed('#Chart21', myChart21);
-    vegaEmbed('#Chart22', myChart22);
-   
 
-// This is the JS for the sidebar
-var mini = true;
 
-function toggleSidebar() {
-    if (mini) {
-        console.log("opening sidebar");
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        this.mini = false;
-    } else {
-        console.log("closing sidebar");
-        document.getElementById("mySidebar").style.width = "75px";
-        document.getElementById("main").style.marginLeft = "75px";
-        this.mini = true;
-    }
-}
+        vegaEmbed('#Chart1', myChart1);
+        vegaEmbed('#Chart2', myChart2);
+        vegaEmbed('#Chart3', myChart3);
+        vegaEmbed('#Chart4', myChart4);
+        vegaEmbed('#Chart5', myChart5);
+        vegaEmbed('#Chart6', myChart6);
+        vegaEmbed('#Chart7', myChart7);
+        vegaEmbed('#Chart8', myChart8);
+        vegaEmbed('#Chart9', myChart9);
+        vegaEmbed('#Chart10', myChart10);
+        vegaEmbed('#Chart11', myChart11);
+        vegaEmbed('#Chart12', myChart12);
+        vegaEmbed('#Chart13', myChart13);
+        vegaEmbed('#Chart14', myChart14);
+        vegaEmbed('#Chart15', myChart15);
+        vegaEmbed('#Chart16', myChart16);
+        vegaEmbed('#Chart17', myChart17);
+        vegaEmbed('#Chart18', myChart18);
+        vegaEmbed('#Chart19', myChart19);
+        vegaEmbed('#Chart20', myChart20);
+        vegaEmbed('#Chart21', myChart21);
+        vegaEmbed('#Chart22', myChart22);
+
+
+        // This is the JS for the sidebar
+        var mini = true;
+
+        function toggleSidebar() {
+            if (mini) {
+                console.log("opening sidebar");
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                this.mini = false;
+            } else {
+                console.log("closing sidebar");
+                document.getElementById("mySidebar").style.width = "75px";
+                document.getElementById("main").style.marginLeft = "75px";
+                this.mini = true;
+            }
+        }
     </script>
 
 </body>
